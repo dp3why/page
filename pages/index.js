@@ -16,7 +16,7 @@ import Image from "next/image";
 import herop from "../public/hero.png";
 import movie from "../public/movie.png";
 import thumbnails from "../public/Thumbnails.png";
-// import details from "../public/details.png";
+import { Link as Scroll } from "react-scroll";
 import search from "../public/search.png";
 import loginpage from "../public/login.png";
 import Link from "next/link";
@@ -44,13 +44,19 @@ export default function Home() {
               </li>
 
               <li className="mr-2 hidden sm:block cursor-pointer">
-                <h3>Skills</h3>
-              </li>
-              <li className="mr-4 hidden sm:block cursor-pointer">
-                <h3>Projects</h3>
+                <Scroll to="skills" smooth={false}>
+                  <h3>Skills</h3>
+                </Scroll>
               </li>
               <li className="mr-2 hidden sm:block cursor-pointer">
-                <h3>Education</h3>
+                <Scroll to="projects" smooth={false}>
+                  <h3>Projects</h3>
+                </Scroll>
+              </li>
+              <li className="mr-4 hidden sm:block cursor-pointer">
+                <Scroll to="education" smooth={false}>
+                  <h3>Education</h3>
+                </Scroll>
               </li>
               <li>
                 <BsFillMoonStarsFill
