@@ -141,7 +141,7 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 font-bold">Skills</h3>
             <p className="text-md text-justify   py-2 leading-6 max-w-4xl text-gray-800">
-              As a master&apos;s in Applied Data Science, I have acquired a
+              As a master student in Applied Data Science, I have acquired a
               profound comprehension of the theoretical and practical aspects of
               computer science, software development and cloud computing.
             </p>
