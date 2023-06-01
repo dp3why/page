@@ -228,7 +228,7 @@ export default function Home() {
 
             <div className="basis-1/3 flex-1 "></div>
           </div>
-          <Link href="https://nefle.vercel.app">
+          <Link href="https://dessertai.vercel.app">
             <Image
               className="cursor-pointer  brightness-90 hover:brightness-110  rounded-lg object-cover transition duration-300 ease-in-out"
               alt="img"
@@ -240,7 +240,7 @@ export default function Home() {
           </Link>
           <div className="flex  flex-col lg:flex-row gap-10 py-10 ">
             <div className=" flex-1 ">
-              <Link href=" https://nefle.vercel.app/signin ">
+              <Link href=" https://dessertai.vercel.app/signin ">
                 <Image
                   className="cursor-pointer brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
                   alt="img"
@@ -252,7 +252,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <Link href=" https://nefle.vercel.app/search ">
+            <Link href=" https://dessertai.vercel.app/search ">
               <div className="relative flex-1">
                 <Image
                   className="cursor-pointer brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
