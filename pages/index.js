@@ -30,7 +30,10 @@ export default function Home() {
         <meta name="description" content="personal website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=" bg-white  dark:bg-gray-900  justify-center  ">
+      <main
+        className=" bg-white  dark:bg-gray-900  
+      justify-center  "
+      >
         <section
           id="header"
           className="snap-center min-h-screen inset-0   pb-10"
