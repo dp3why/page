@@ -126,14 +126,20 @@ export default function Home() {
           justify-center md:gap-[3rem] lg:gap-[4rem] 
           gap-[2rem] py-3 mt-5 lg:mt-12 text-gray-600 dark:text-gray-400"
           >
-            <AiFillTwitterCircle className="dark:hover:text-white" />
-            <AiFillLinkedin className="dark:hover:text-white" />
+            <Link href="https://twitter.com/dp3why">
+              <AiFillTwitterCircle className="dark:hover:text-white" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/hongyiusc/">
+              <AiFillLinkedin className="dark:hover:text-white" />
+            </Link>
             <Link href="https://github.com/dp3why">
               <AiFillGithub className="dark:hover:text-white" />
             </Link>
 
             <AiFillGoogleCircle className="dark:hover:text-white" />
-            <AiFillMail className="dark:hover:text-white" />
+            <Link href="mailto:dp3why@gmail.com">
+              <AiFillMail className="dark:hover:text-white" />
+            </Link>
           </div>
         </section>
         {/* ===================Skills======================= */}
