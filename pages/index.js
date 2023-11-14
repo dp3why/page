@@ -14,11 +14,14 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import Image from "next/image";
 import herop from "../public/hero.png";
-import movie from "../public/movie.png";
-import thumbnails from "../public/Thumbnails.png";
+import dessert0 from "../public/Thumbnails.png";
+import dessert3 from "../public/movie.png";
+import ins3 from "../public/ins.png";
 import { Link as Scroll } from "react-scroll";
-import search from "../public/search.png";
-import loginpage from "../public/login.png";
+import dessert2 from "../public/search.png";
+import loginIns from "../public/ins-login.png";
+import ins2 from "../public/ins2.png";
+import dessert1 from "../public/login.png";
 import Link from "next/link";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -71,7 +74,7 @@ export default function Home() {
                 <a
                   className="bg-gradient-to-r from-orange-500 to-orange-300
                    text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="#"
+                  href="dp3why@gmail.com"
                 >
                   Contact
                 </a>
@@ -135,7 +138,6 @@ export default function Home() {
             <Link href="https://github.com/dp3why">
               <AiFillGithub className="dark:hover:text-white" />
             </Link>
-
             <AiFillGoogleCircle className="dark:hover:text-white" />
             <Link href="mailto:dp3why@gmail.com">
               <AiFillMail className="dark:hover:text-white" />
@@ -237,28 +239,28 @@ export default function Home() {
           <Link href="https://dessertai.vercel.app">
             <Image
               className="cursor-pointer  brightness-90 hover:brightness-110  rounded-lg object-cover transition duration-300 ease-in-out"
-              alt="img"
+              alt="desserts-0"
               width={"100%"}
-              height={"40%"}
+              height={"45%"}
               layout="responsive"
-              src={movie}
+              src={dessert0}
             />
           </Link>
           <div className="flex  flex-col lg:flex-row gap-10 py-10 ">
             <div className=" flex-1 ">
-              <Link href=" https://dessertai.vercel.app/signin ">
+              <Link href="https://dessertai.vercel.app/signin">
                 <Image
                   className="cursor-pointer brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
                   alt="img"
                   width={"100%"}
                   height={"100%"}
                   layout="responsive"
-                  src={loginpage}
+                  src={dessert1}
                 />
               </Link>
             </div>
 
-            <Link href=" https://dessertai.vercel.app/search ">
+            <Link href="https://dessertai.vercel.app/search">
               <div className="relative flex-1">
                 <Image
                   className="cursor-pointer brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
@@ -266,18 +268,56 @@ export default function Home() {
                   width={"100%"}
                   height={"100%"}
                   layout="responsive"
-                  src={search}
+                  src={dessert2}
                 />
               </div>
             </Link>
             <div className="  flex-1">
               <Image
                 className=" brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
-                alt="img"
+                alt="dessert3"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                src={thumbnails}
+                src={dessert3}
+              />
+            </div>
+          </div>
+          {/* APP 2 */}
+          <div className="flex  flex-col lg:flex-row gap-10 py-10 ">
+            <div className=" flex-1 ">
+              <Link href="https://lambent-praline-ebd115.netlify.app/">
+                <Image
+                  className="cursor-pointer brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
+                  alt="instgram"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                  src={loginIns}
+                />
+              </Link>
+            </div>
+
+            <Link href="https://lambent-praline-ebd115.netlify.app/">
+              <div className="relative flex-1">
+                <Image
+                  className="cursor-pointer brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
+                  alt="ins-2"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                  src={ins2}
+                />
+              </div>
+            </Link>
+            <div className="  flex-1">
+              <Image
+                className=" brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
+                alt="ins-3"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+                src={ins3}
               />
             </div>
           </div>
@@ -336,9 +376,15 @@ export default function Home() {
           justify-center
           gap-[1rem] py-3 text-gray-600 dark:text-gray-400"
         >
-          <AiFillTwitterCircle className="dark:hover:text-white" />
-          <AiFillLinkedin className="dark:hover:text-white" />
-          <AiFillGithub className="dark:hover:text-white" />
+          <Link href="https://twitter.com/dp3why">
+            <AiFillTwitterCircle className="dark:hover:text-white" />
+          </Link>
+          <Link href="https://www.linkedin.com/in/hongyiusc/">
+            <AiFillLinkedin className="dark:hover:text-white" />
+          </Link>
+          <Link href="https://github.com/dp3why">
+            <AiFillGithub className="dark:hover:text-white" />
+          </Link>
           <AiFillGoogleCircle className="dark:hover:text-white" />
           <AiFillMail className="dark:hover:text-white" />
         </div>
