@@ -62,6 +62,23 @@ export default function Home() {
       url: "https://instdemo.netlify.app/",
       description: "A social media app imitating Instagram.",
     },
+    {
+      id: 7,
+      title: "VibeCircle: Social Media for Image Sharing",
+      image:
+        "https://raw.githubusercontent.com/dp3why/page/main/public/images/vibecircle.png",
+      url: "https://vibecircle.netlify.app/",
+      description: "A social media for sharing images and videos.",
+    },
+    {
+      id: 8,
+      title: "GreenHug: Food Online Order App",
+      image:
+        "https://raw.githubusercontent.com/dp3why/page/main/public/images/greenhug.png",
+      url: "https://bit.ly/greehugapp",
+      description:
+        "An online food ordering app for users to browse menu and create orders.",
+    },
   ];
   return (
     <div className={darkMode ? "dark" : ""}>
