@@ -41,7 +41,7 @@ const HeroSection = () => {
         {/*eslint-disable-next-line @next/next/no-img-element*/}
         <Image
           className="rounded-full z-10"
-          src="/hero.png" // Assuming hero.png is in the public directory
+          src="https://raw.githubusercontent.com/dp3why/page/main/public/hero.png" // Assuming hero.png is in the public directory
           alt="heropage"
           width={350} // Specify width
           height={350} // And height

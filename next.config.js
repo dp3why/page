@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["github.com", "github.io"], // List of domains your images will be loaded from
+    domains: ["github.com", "raw.githubusercontent.com"], // List of domains your images will be loaded from
   },
 };
 
