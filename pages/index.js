@@ -34,7 +34,41 @@ import {
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const cards = [1, 2, 3, 4, 5, 6, 7, 8];
+  const cards = [
+    {
+      id: 1,
+      title: "MedicalBridge: Online Ordering System",
+      image: "/images/medical.png",
+      description:
+        "An online shopping platform for medical supplies and equipment",
+    },
+    {
+      id: 2,
+      title: "Investspehere: Investment Insights Social Media",
+      image: "/images/investsphere.png",
+      description: "A social media platform for investors and traders.",
+    },
+    {
+      id: 3,
+      title: "StaySweet: Short Rental Booking",
+      image: "/images/staysweet.png",
+      description: "A short rental Booking website for travelers and hosts.",
+    },
+    {
+      id: 4,
+      title: "TwitchTrendz",
+      image: "/images/twitchTrends.png",
+      description:
+        "A web app for Twitch streamers to analyze their performance.",
+    },
+    {
+      id: 5,
+      title: "InstaClone: Social Media App",
+      image: "/images/ins.png",
+      description: "A social media app imitating Instagram.",
+    },
+  ];
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -45,7 +79,7 @@ export default function Home() {
       {/* =================== NavBar ======================= */}
       <nav
         className="sticky py-8 px-5 lg:px-10 xl:px-[10rem] 
-        z-100
+        z-300
       bg-white dark:bg-gray-900 w-screen
       inset-0  flex justify-between dark:text-white"
       >
@@ -89,15 +123,13 @@ export default function Home() {
       </nav>
       {/*  ==== main page  === */}
       <main
-        className="    dark:bg-gray-900  
+        className=" pt-10 dark:bg-gray-900  
       justify-center  "
       >
         {/* =================== p1 Hero ======================= */}
         <section
           id="header"
-          className="snap-center min-h-[60vh]  
-      
-          inset-0   pb-10"
+          className="snap-center min-h-[60vh]  inset-0   pb-10"
         >
           <div
             id="hero"
@@ -133,63 +165,52 @@ export default function Home() {
               </p>
             </div>
             {/* <div className="flex flex-auto rounded-full items-center justify-center "> */}
-            <Image
-              className=" flex flex-1 rounded-full z-20"
-              src={herop}
+            {/*eslint-disable-next-line @next/next/no-img-element*/}
+            <img
+              className="rounded-full object-cover w-[350px] h-[350px]"
+              src="/hero.png"
               alt="heropage"
-              width={350}
-              height={350}
-              objectFit="cover"
             />
             {/* </div> */}
-          </div>
-          <div
-            className="text-5xl flex cursor-pointer 
-          justify-center md:gap-[3rem] lg:gap-[4rem] 
-          gap-[2rem] py-3 mt-5 lg:mt-12 text-gray-600 dark:text-gray-400"
-          >
-            <Link href="https://twitter.com/dp3why">
-              <AiFillTwitterCircle className="dark:hover:text-white" />
-            </Link>
-            <Link href="https://www.linkedin.com/in/hongyiusc/">
-              <AiFillLinkedin className="dark:hover:text-white" />
-            </Link>
-            <Link href="https://github.com/dp3why">
-              <AiFillGithub className="dark:hover:text-white" />
-            </Link>
-            <AiFillGoogleCircle className="dark:hover:text-white" />
-            <Link href="mailto:dp3why@gmail.com">
-              <AiFillMail className="dark:hover:text-white" />
-            </Link>
           </div>
         </section>
         {/*  ============== p2 Project cards ============== */}
         <section
           id="projects"
-          className="snap-center 
+          className="snap-center   px-20 py-10
               overflow-hidden
-           w-screen p-20"
+           w-screen"
         >
+          <div>Featured Projects</div>
           <Grid container spacing={10} className="">
             {cards.map((card) => (
-              <Grid item key={card} sm={12} md={6} lg={4}>
-                <Card>
+              <Grid item key={card.id} xs={12} sm={12} md={12} lg={6} xl={4}>
+                <Card className="shadow-lg  marker: rounded-lg flex flex-col justify-between">
                   {/* image */}
                   <CardMedia
-                    className="h-[40vh] "
-                    image="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22288%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20288%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_164edaf95ee%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_164edaf95ee%22%3E%3Crect%20width%3D%22288%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2296.32500076293945%22%20y%3D%22118.8%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" // eslint-disable-line max-len
+                    className="min-h-[20rem]"
+                    image={card.image}
                     title="Image title"
                   />
-                  <CardContent className="">
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                  <CardContent
+                    className="h-[10em] 
+                  flex flex-col justify-between  dark:bg-gray-200
+                   "
+                  >
+                    <Typography
+                      className="text-center font-bold   "
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
+                      {card.title}
                     </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
+                    <div className="flex flex-col justify-center">
+                      <Typography className=" text-gray-800 " component="h6">
+                        {card.description}
+                      </Typography>
+                    </div>
                   </CardContent>
-                  <CardActions></CardActions>
                 </Card>
               </Grid>
             ))}
@@ -199,7 +220,8 @@ export default function Home() {
         {/* ===================Skills======================= */}
         <section
           id="skills"
-          className="snap-center bg-gradient-to-tl dark:bg-gray-400 w-screen p-10"
+          className=" p-10 snap-center bg-gradient-to-tl 
+           dark:bg-gray-400 w-screen"
         >
           <div>
             <h3 className="text-3xl py-1 font-bold">Skills</h3>
@@ -291,7 +313,8 @@ export default function Home() {
           {/* Large Image */}
           <Link href="https://dessertai.vercel.app">
             <Image
-              className="cursor-pointer  brightness-90 hover:brightness-110  rounded-lg object-cover transition duration-300 ease-in-out"
+              className="cursor-pointer z-10 brightness-90 hover:brightness-110 
+               rounded-lg object-cover transition duration-300 ease-in-out"
               alt="desserts-0"
               width={"100%"}
               height={"45%"}
@@ -303,7 +326,7 @@ export default function Home() {
             <div className=" flex-1 ">
               <Link href="https://dessertai.vercel.app/signin">
                 <Image
-                  className="cursor-pointer brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
+                  className="cursor-pointer z-10 brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
                   alt="img"
                   width={"100%"}
                   height={"100%"}
@@ -327,7 +350,7 @@ export default function Home() {
             </Link>
             <div className="  flex-1">
               <Image
-                className=" brightness-90 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
+                className=" brightness-90  z-10 hover:brightness-110 transition duration-300 ease-in-out rounded-lg object-cover"
                 alt="dessert3"
                 width={"100%"}
                 height={"100%"}
