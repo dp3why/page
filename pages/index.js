@@ -24,7 +24,6 @@ import ins2 from "../public/ins2.png";
 import dessert1 from "../public/login.png";
 import Link from "next/link";
 import {
-  Button,
   Typography,
   Card,
   CardContent,
@@ -48,7 +47,7 @@ export default function Home() {
         className="sticky py-8 px-5 lg:px-10 xl:px-[10rem] 
         z-100
       bg-white dark:bg-gray-900 w-screen
-      inset-0 mb-3 flex justify-between dark:text-white"
+      inset-0  flex justify-between dark:text-white"
       >
         <h1 className="font-burtons mr-5 font-bold text-xl">dp3why</h1>
         <ul className="flex items-center gap-2 text-sm">
@@ -90,20 +89,20 @@ export default function Home() {
       </nav>
       {/*  ==== main page  === */}
       <main
-        className=" bg-white  dark:bg-gray-900  mt-6
+        className="    dark:bg-gray-900  
       justify-center  "
       >
         {/* =================== p1 Hero ======================= */}
         <section
           id="header"
           className="snap-center min-h-[60vh]  
-          bg-orange-500
+      
           inset-0   pb-10"
         >
           <div
             id="hero"
-            className="flex flex-wrap px-3 w-screen 
-            bg-orange-100 dark:bg-gray-900
+            className="flex flex-wrap px-3 py-5 w-screen 
+            dark:bg-gray-900
              text-center justify-center items-center 
             lg:px-[10rem] 
             xl:px-[12rem]"
@@ -124,7 +123,7 @@ export default function Home() {
 
               <p
                 className="text-start text-sm md:text-md lg:text-xl
-                pb-5 px-3   sm:w-[30rem]  max-w-md
+                pb-5 px-3   sm:w-[30rem]  max-w-md mt-3
                text-gray-800 dark:text-gray-100 font-roboto
                "
               >
@@ -200,7 +199,7 @@ export default function Home() {
         {/* ===================Skills======================= */}
         <section
           id="skills"
-          className="snap-center bg-gradient-to-tl from-orange-500 to-orange-300 w-screen p-10"
+          className="snap-center bg-gradient-to-tl dark:bg-gray-400 w-screen p-10"
         >
           <div>
             <h3 className="text-3xl py-1 font-bold">Skills</h3>
@@ -248,9 +247,9 @@ export default function Home() {
               <h3 className="text-lg font-bold text-black my-2 ">
                 Programming Skills
               </h3>
-              <h4 className="py-1 text-gray-800 ">Python / Java / Go</h4>
+              <h4 className="py-1 text-gray-800 ">Java / Python / Go</h4>
               <h4 className="py-1  text-gray-800 ">JavaScript / HTML / CSS</h4>
-              <h4 className="py-1  text-gray-800 ">Cypher / SQL</h4>
+              <h4 className="py-1  text-gray-800 ">Kotlin / Cypher / SQL</h4>
             </div>
             {/* ============ 3 ========== */}
             <div
@@ -285,7 +284,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex">
-            <h1 className="text-start font-bold text-2xl my-1">
+            <h1 className="text-start font-bold text-2xl my-1 dark:text-white">
               Dessert Movie Recommendation App
             </h1>
           </div>
@@ -337,7 +336,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <h1 className="text-start font-bold text-2xl my-1">
+          <h1 className="text-start font-bold text-2xl my-1 dark:text-white">
             Social Media App Imitating Instagram
           </h1>
           {/* APP 2 */}
