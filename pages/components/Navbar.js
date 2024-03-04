@@ -5,8 +5,8 @@ import { Link as Scroll } from "react-scroll";
 const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <nav
-      className="sticky py-8 px-5 lg:px-10 xl:px-[10rem] 
-    z-300
+      className="sticky py-8 px-5 lg:px-10 xl:px-[10rem]
+        z-50
   bg-white dark:bg-gray-900 w-screen
   inset-0  flex justify-between dark:text-white"
     >

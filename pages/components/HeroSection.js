@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const HeroSection = () => {
@@ -38,10 +39,13 @@ const HeroSection = () => {
         </div>
         {/* <div className="flex flex-auto rounded-full items-center justify-center "> */}
         {/*eslint-disable-next-line @next/next/no-img-element*/}
-        <img
-          className="rounded-full object-cover w-[350px] h-[350px]"
-          src="/hero.png"
+        <Image
+          className="rounded-full z-10"
+          src="/hero.png" // Assuming hero.png is in the public directory
           alt="heropage"
+          width={350} // Specify width
+          height={350} // And height
+          objectFit="cover" // This prop adjusts how the image fits into the container (similar to the CSS object-fit property)
         />
         {/* </div> */}
       </div>

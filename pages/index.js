@@ -98,11 +98,14 @@ export default function Home() {
                    rounded-lg flex flex-col justify-between"
                   >
                     {/* image */}
-                    <CardMedia
-                      className="min-h-[20rem]"
-                      image={card.image}
-                      title="Image title"
-                    />
+                    <div
+                      style={{
+                        minHeight: "20rem",
+                        backgroundImage: `url(${card.image})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    ></div>
                     <CardContent
                       className="h-[10em] 
                   flex flex-col justify-between  dark:bg-gray-200
