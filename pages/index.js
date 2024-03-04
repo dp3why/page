@@ -23,9 +23,19 @@ import loginIns from "../public/ins-login.png";
 import ins2 from "../public/ins2.png";
 import dessert1 from "../public/login.png";
 import Link from "next/link";
+import {
+  Button,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  CardActions,
+  Grid,
+} from "@mui/material";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
+  const cards = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -33,59 +43,70 @@ export default function Home() {
         <meta name="description" content="personal website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* =================== NavBar ======================= */}
+      <nav
+        className="sticky py-8 px-5 lg:px-10 xl:px-[10rem] 
+        z-100
+      bg-white dark:bg-gray-900 w-screen
+      inset-0 mb-3 flex justify-between dark:text-white"
+      >
+        <h1 className="font-burtons mr-5 font-bold text-xl">dp3why</h1>
+        <ul className="flex items-center gap-2 text-sm">
+          <li className="mr-2 hidden sm:block cursor-pointer">
+            <h3>About</h3>
+          </li>
+
+          <li className="mr-2 hidden sm:block cursor-pointer">
+            <Scroll to="skills" smooth={false}>
+              <h3>Skills</h3>
+            </Scroll>
+          </li>
+          <li className="mr-2 hidden sm:block cursor-pointer">
+            <Scroll to="projects" smooth={false}>
+              <h3>Projects</h3>
+            </Scroll>
+          </li>
+          <li className="mr-4 hidden sm:block cursor-pointer">
+            <Scroll to="education" smooth={false}>
+              <h3>Education</h3>
+            </Scroll>
+          </li>
+          <li>
+            <BsFillMoonStarsFill
+              onClick={() => setDarkMode(!darkMode)}
+              className=" cursor-pointer text-2xl"
+            />
+          </li>
+          <li>
+            <a
+              className="bg-gradient-to-r from-orange-500 to-orange-300
+                   text-white px-4 py-2 border-none rounded-md ml-8"
+              href="mailto:dp3why@gmail.com"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      {/*  ==== main page  === */}
       <main
-        className=" bg-white  dark:bg-gray-900  
+        className=" bg-white  dark:bg-gray-900  mt-6
       justify-center  "
       >
+        {/* =================== p1 Hero ======================= */}
         <section
           id="header"
-          className="snap-center min-h-screen inset-0   pb-10"
+          className="snap-center min-h-[60vh]  
+          bg-orange-500
+          inset-0   pb-10"
         >
-          {/* =================== NavBar ======================= */}
-          <nav className="py-8 px-5 lg:mx-10 xl:mx-[10rem] inset-0 mb-3 flex justify-between dark:text-white">
-            <h1 className="font-burtons mr-5 font-bold text-xl">dp3why</h1>
-            <ul className="flex items-center gap-2 text-sm">
-              <li className="mr-2 hidden sm:block cursor-pointer">
-                <h3>About</h3>
-              </li>
-
-              <li className="mr-2 hidden sm:block cursor-pointer">
-                <Scroll to="skills" smooth={false}>
-                  <h3>Skills</h3>
-                </Scroll>
-              </li>
-              <li className="mr-2 hidden sm:block cursor-pointer">
-                <Scroll to="projects" smooth={false}>
-                  <h3>Projects</h3>
-                </Scroll>
-              </li>
-              <li className="mr-4 hidden sm:block cursor-pointer">
-                <Scroll to="education" smooth={false}>
-                  <h3>Education</h3>
-                </Scroll>
-              </li>
-              <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className=" cursor-pointer text-2xl"
-                />
-              </li>
-              <li>
-                <a
-                  className="bg-gradient-to-r from-orange-500 to-orange-300
-                   text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="mailto:dp3why@gmail.com"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-          {/* =================== Hero ======================= */}
           <div
             id="hero"
-            className="flex flex-wrap px-3 w-screen   text-center justify-center items-center 
-            lg:px-[10rem] xl:px-[12rem]"
+            className="flex flex-wrap px-3 w-screen 
+            bg-orange-100 dark:bg-gray-900
+             text-center justify-center items-center 
+            lg:px-[10rem] 
+            xl:px-[12rem]"
           >
             <div className="flex flex-col justify-center ">
               <h2
@@ -114,12 +135,11 @@ export default function Home() {
             </div>
             {/* <div className="flex flex-auto rounded-full items-center justify-center "> */}
             <Image
-              className=" flex flex-1 rounded-full"
+              className=" flex flex-1 rounded-full z-20"
               src={herop}
               alt="heropage"
               width={350}
               height={350}
-              // layout="fill"
               objectFit="cover"
             />
             {/* </div> */}
@@ -144,6 +164,39 @@ export default function Home() {
             </Link>
           </div>
         </section>
+        {/*  ============== p2 Project cards ============== */}
+        <section
+          id="projects"
+          className="snap-center 
+              overflow-hidden
+           w-screen p-20"
+        >
+          <Grid container spacing={10} className="">
+            {cards.map((card) => (
+              <Grid item key={card} sm={12} md={6} lg={4}>
+                <Card>
+                  {/* image */}
+                  <CardMedia
+                    className="h-[40vh] "
+                    image="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22288%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20288%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_164edaf95ee%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_164edaf95ee%22%3E%3Crect%20width%3D%22288%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2296.32500076293945%22%20y%3D%22118.8%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" // eslint-disable-line max-len
+                    title="Image title"
+                  />
+                  <CardContent className="">
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Heading
+                    </Typography>
+                    <Typography>
+                      This is a media card. You can use this section to describe
+                      the content.
+                    </Typography>
+                  </CardContent>
+                  <CardActions></CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </section>
+
         {/* ===================Skills======================= */}
         <section
           id="skills"
@@ -217,7 +270,7 @@ export default function Home() {
           </div>
         </section>
         {/* ========== projects  ==========*/}
-        <section id="projects" className=" snap-center p-10">
+        <section id="projects2" className=" snap-center p-10">
           <div>
             <h3 className="text-3xl font-bold py-1  text-orange-600  dark:text-orange-300  ">
               Projects
@@ -365,11 +418,11 @@ export default function Home() {
                 Master of Science
               </h4>
               <h4 className="py-1  text-gray-800 ">Applied Data Science</h4>
-              <h4 className="py-1  text-gray-800 ">Expected Dec 2023</h4>
             </div>
           </div>
         </section>
       </main>
+      {/* ===== footer === */}
       <footer
         className="w-screen flex flex-col dark:bg-black dark:text-gray-200
       items-center justify-center p-2"
