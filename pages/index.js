@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-import Education from "./components/Education";
-import Navbar from "./components/Navbar";
+import Education from "../components/Education";
+import Navbar from "../components/Navbar";
 import { Typography, Card, CardContent, CardMedia, Grid } from "@mui/material";
-import HeroSection from "./components/HeroSection";
-import Footer from "./components/Footer";
-import Skills from "./components/Skills";
+import HeroSection from "../components/HeroSection";
+import Footer from "../components/Footer";
+import Skills from "../components/Skills";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -98,14 +98,11 @@ export default function Home() {
                    rounded-lg flex flex-col justify-between"
                   >
                     {/* image */}
-                    <div
-                      style={{
-                        minHeight: "20rem",
-                        backgroundImage: `url(${card.image})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                      }}
-                    ></div>
+                    <CardMedia
+                      className="min-h-[20rem]"
+                      image={card.image}
+                      title="Image title"
+                    />
                     <CardContent
                       className="h-[10em] 
                   flex flex-col justify-between  dark:bg-gray-200
