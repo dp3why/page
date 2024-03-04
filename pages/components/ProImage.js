@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import dessert0 from "../public/Thumbnails.png";
 import dessert3 from "../public/movie.png";
 import ins3 from "../public/ins.png";
