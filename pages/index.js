@@ -92,7 +92,7 @@ export default function Home() {
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       {/*  ==== main page  === */}
       <main
-        className=" pt-10 dark:bg-gray-900  
+        className=" pt-10 dark:bg-gray-700  
       justify-center  "
       >
         {/* =================== p1 Hero ======================= */}
@@ -116,7 +116,7 @@ export default function Home() {
               <Grid item key={card.id} xs={12} sm={12} md={12} lg={6} xl={6}>
                 <Link href={card.url}>
                   <Card
-                    className="shadow-lg cursor-pointer 
+                    className="shadow-lg cursor-pointer  
                     hover:shadow-2xl hover:scale-105 transition duration-300 ease-in-out
                    rounded-lg flex flex-col justify-between"
                   >

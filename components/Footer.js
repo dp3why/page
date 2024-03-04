@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <footer
-      className="w-screen flex flex-col dark:bg-black dark:text-gray-200
+      className="w-screen flex flex-col dark:bg-gray-800 dark:text-gray-200
   items-center justify-center p-2"
     >
       <h3 className="font-semibold">Contact information</h3>

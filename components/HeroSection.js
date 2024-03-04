@@ -3,11 +3,15 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section id="header" className="snap-center min-h-[60vh]  inset-0   pb-10">
+    <section
+      id="header"
+      className="snap-center min-h-[60vh] 
+     inset-0   pb-10"
+    >
       <div
         id="hero"
         className="flex flex-wrap px-3 py-5 w-screen 
-      dark:bg-gray-900
+      bg-transparent 
        text-center justify-center items-center 
       lg:px-[10rem] 
       xl:px-[12rem]"
