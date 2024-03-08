@@ -75,7 +75,7 @@ export default function Home() {
       title: "GreenHug: Food Online Order App",
       image:
         "https://raw.githubusercontent.com/dp3why/page/main/public/images/greenhug.png",
-      url: "https://bit.ly/greehugapp",
+      url: "https://bit.ly/greenhugapp",
       description:
         "An online food ordering app for users to browse menu and create orders.",
     },
